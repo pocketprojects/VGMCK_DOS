@@ -19,8 +19,8 @@ SRCS_DEBUG = $(SRCS) v_debug.c
 OBJS        = $(SRCS:.c=.o)
 OBJS_DEBUG  = $(SRCS:.c=_d.o)
 
-MAIN       ?= vgmck
-MAIN_DEBUG ?= vgmck_d
+MAIN       ?= vgmck.exe
+MAIN_DEBUG ?= vgmck_d.exe
 
 CC             = gcc
 
@@ -37,7 +37,8 @@ LDFLAGS_DEBUG  ?= $(LDFLAGS_COMMON) -g
 all: $(MAIN) $(MAIN_DEBUG)
 
 clean:
-	rm *.o *.O *.exe *.EXE $(MAIN) $(MAIN_DEBUG)
+	del *.o
+	del *.exe
 
 $(MAIN): $(OBJS)
 	$(CC) -o $(MAIN) $(OBJS) $(LDFLAGS_DEBUG)

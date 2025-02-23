@@ -1,3 +1,10 @@
+# VGMCK_DOS
+A fork (of a fork of zzo38's VGMCK MML to VGM Compiler) for providing DOS binary.  
+The only change from the original repository is a change in file names (DOS systems require file names no longer than eight characters) and the addition of a Makefile for DOS (DJGPP).  
+  
+## Build
+On Linux just use `make`, on MS-DOS/FreeDOS/DOSBox install [DJGPP](https://www.delorie.com/djgpp/) and use `make -f make_dos.mk`.
+
 # VGMCK_Arch
 A fork of zzo38's VGMCK MML to VGM Compiler, doubling as an archive of the original version.
 
